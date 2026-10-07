@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaCart | Modern Store</title>
+    <meta name="description" content="Modern e-commerce storefront demo" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand-wrap">
+          <div class="logo">N</div>
+          <div class="brand-text">
+            <span>Nova</span>
+            <strong>Cart</strong>
+          </div>
+        </div>
+
+        <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#products">Shop</a>
+          <a href="#featured">Featured</a>
+          <a href="#reviews">Reviews</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" aria-label="Search">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 4a6 6 0 104.59 10.29l4.71 4.7 1.41-1.41-4.7-4.71A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"/></svg>
+          </button>
+          <button class="icon-button cart-button" aria-label="Shopping cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a2 2 0 110 4 2 2 0 010-4zm10 0a2 2 0 110 4 2 2 0 010-4zM6.2 6h14.7l-1.6 7.6A2 2 0 0117.3 15H9.4A2 2 0 017.5 13L5.1 4H2V2h4l.3 1.5L7.2 6zm2.1 8h9.5l1.2-5.5H7.4L8.3 14z"/></svg>
+            <span id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">New collection</span>
+            <h1>Shop smarter for your everyday essentials.</h1>
+            <p>
+              Discover premium gadgets, home products, and lifestyle favorites built to make life easier.
+            </p>
+            <div class="cta-row">
+              <a class="primary-btn" href="#products">Shop now</a>
+              <a class="secondary-btn" href="#featured">Explore deals</a>
+            </div>
+            <ul class="hero-meta">
+              <li>Free shipping over $50</li>
+              <li>Secure checkout</li>
+              <li>30-day returns</li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="feature-card main-product">
+              <div class="card-badge">Best seller</div>
+              <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=80" alt="Running shoes" />
+              <div class="product-mini-info">
+                <div>
+                  <span>Air Flex</span>
+                  <strong>Runner Pro</strong>
+                </div>
+                <strong>$129</strong>
+              </div>
+            </div>
+            <div class="floating-badge badge-one">
+              <strong>4.9</strong>
+              <span>Top rated</span>
+            </div>
+            <div class="floating-badge badge-two">
+              <strong>2.4k+</strong>
+              <span>Happy buyers</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-bar">
+        <div class="container trust-grid">
+          <div><strong>15k+</strong><span>Orders shipped</span></div>
+          <div><strong>98%</strong><span>Customer satisfaction</span></div>
+          <div><strong>24/7</strong><span>Support team</span></div>
+          <div><strong>5.0</strong><span>Average review</span></div>
+        </div>
+      </section>
+
+      <section id="featured" class="featured-section">
+        <div class="container section-heading">
+          <div>
+            <span class="eyebrow">Featured deals</span>
+            <h2>Handpicked for your lifestyle</h2>
+          </div>
+          <a href="#products">View all</a>
+        </div>
+
+        <div class="container feature-grid">
+          <article class="feature-panel large">
+            <div>
+              <span>Weekend picks</span>
+              <h3>Smart home upgrades</h3>
+              <a href="#products">Shop collection</a>
+            </div>
+          </article>
+          <article class="feature-panel small accent-one">
+            <div>
+              <span>Up to 40% off</span>
+              <h3>Audio essentials</h3>
+            </div>
+          </article>
+          <article class="feature-panel small accent-two">
+            <div>
+              <span>Fresh arrivals</span>
+              <h3>Active wear</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="products" class="products-section">
+        <div class="container section-heading product-head">
+          <div>
+            <span class="eyebrow">Our products</span>
+            <h2>Shop trending picks</h2>
+          </div>
+          <div class="toolbar">
+            <input id="searchInput" type="text" placeholder="Search products..." aria-label="Search products" />
+            <select id="categoryFilter" aria-label="Filter by category">
+              <option value="all">All categories</option>
+              <option value="electronics">Electronics</option>
+              <option value="fashion">Fashion</option>
+              <option value="home">Home</option>
+              <option value="fitness">Fitness</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="productGrid" class="container product-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="reviews" class="reviews-section">
+        <div class="container section-heading">
+          <div>
+            <span class="eyebrow">Reviews</span>
+            <h2>What shoppers are saying</h2>
+          </div>
+        </div>
+
+        <div class="container review-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“The quality exceeded my expectations. Shipping was fast and the design feels premium.”</p>
+            <div class="reviewer"><strong>Leah M.</strong><span>Verified buyer</span></div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“I found exactly what I needed and checkout was super smooth. Will definitely shop again.”</p>
+            <div class="reviewer"><strong>Marcus T.</strong><span>Repeat customer</span></div>
+          </article>
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>“The site is easy to use and the product range is fantastic. Great value for money.”</p>
+            <div class="reviewer"><strong>Sophia R.</strong><span>Loyal shopper</span></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart">
+      <div class="drawer-header">
+        <h3>Your Cart</h3>
+        <button id="closeCart" class="close-btn" aria-label="Close cart">×</button>
+      </div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-footer">
+        <div class="total-row">
+          <span>Subtotal</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+        <button class="checkout-btn">Proceed to checkout</button>
+      </div>
+    </aside>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
